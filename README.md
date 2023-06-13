@@ -1,2 +1,0 @@
-# Miaouf
-Openclassroom navigation tutorial
