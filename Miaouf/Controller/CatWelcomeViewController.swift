@@ -1,13 +1,13 @@
 //
-//  SuccessViewController.swift
+//  CatWelcomeViewController.swift
 //  Miaouf
 //
-//  Created by Pierre Sabard on 13/06/2023.
+//  Created by Pierre Sabard on 14/06/2023.
 //
 
 import UIKit
 
-class SuccessViewController: UIViewController {
+class CatWelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +15,7 @@ class SuccessViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func dimiss(_ sender: Any) {
-        dismiss(animated: true)
-    }
-    
+
     /*
     // MARK: - Navigation
 

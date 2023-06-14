@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ZO-OB-WIc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="deu-d4-FoN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -8,10 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Chien-->
         <scene sceneID="jQC-Ew-ZBD">
             <objects>
                 <navigationController id="6ZO-OB-WIc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chien" image="Dog 1" id="kJR-Na-Tfw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b0o-nf-8Cz">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -85,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsM-ie-uei">
-                                <rect key="frame" x="71.666666666666686" y="763" width="250" height="35"/>
+                                <rect key="frame" x="71.666666666666686" y="714" width="250" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="6Fe-Ka-Bjm"/>
                                     <constraint firstAttribute="width" constant="250" id="FEg-SF-Dfg"/>
@@ -124,11 +125,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bravo !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-4X-2oF">
                                 <rect key="frame" x="120.66666666666667" y="395" width="151.66666666666663" height="62.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.20482000710000001" green="0.47088336939999997" blue="0.64917975660000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-RZ-ald">
-                                <rect key="frame" x="46.666666666666657" y="797.66666666666663" width="300" height="34.333333333333371"/>
+                                <rect key="frame" x="46.666666666666657" y="772.66666666666663" width="300" height="34.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ywk-Lk-hCd"/>
                                 </constraints>
@@ -136,24 +137,90 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Inscrire un autre animal">
                                     <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="qgR-3F-D07" kind="unwind" unwindAction="unwindToWelcomeWithSegue:" id="kpH-jB-U2i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFY-nM-r2c">
+                                <rect key="frame" x="30.000000000000004" y="80" width="40.333333333333343" height="44"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dimiss:" destination="rwt-30-TWn" eventType="touchUpInside" id="wcu-tD-m4R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YwO-r9-XHa"/>
                         <color key="backgroundColor" red="0.72902917860000005" green="0.98634558920000004" blue="0.99447208639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="CFY-nM-r2c" firstAttribute="leading" secondItem="YwO-r9-XHa" secondAttribute="leading" constant="30" id="0Zy-LJ-oz8"/>
                             <constraint firstItem="gLm-4X-2oF" firstAttribute="centerY" secondItem="RTE-fy-AFg" secondAttribute="centerY" id="axD-Qs-FWr"/>
-                            <constraint firstItem="YwO-r9-XHa" firstAttribute="bottom" secondItem="fXT-RZ-ald" secondAttribute="bottom" constant="20" id="ffP-bn-7gH"/>
+                            <constraint firstItem="YwO-r9-XHa" firstAttribute="bottom" secondItem="fXT-RZ-ald" secondAttribute="bottom" constant="45" id="ffP-bn-7gH"/>
                             <constraint firstItem="fXT-RZ-ald" firstAttribute="centerX" secondItem="RTE-fy-AFg" secondAttribute="centerX" id="hI3-70-UTE"/>
                             <constraint firstItem="gLm-4X-2oF" firstAttribute="centerX" secondItem="RTE-fy-AFg" secondAttribute="centerX" id="k7c-5E-5FQ"/>
+                            <constraint firstItem="CFY-nM-r2c" firstAttribute="top" secondItem="YwO-r9-XHa" secondAttribute="top" constant="80" id="xFw-GY-uhi"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fW-V7-5qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qgR-3F-D07" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2307.6335877862593" y="-704.92957746478874"/>
+            <point key="canvasLocation" x="3140" y="-638"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="e5f-7x-rJI">
+            <objects>
+                <tabBarController id="deu-d4-FoN" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hsc-xz-FNk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPurpleColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UGD-68-Yxj" kind="relationship" relationship="viewControllers" id="KpN-Nu-POd"/>
+                        <segue destination="6ZO-OB-WIc" kind="relationship" relationship="viewControllers" id="bSw-2b-qkK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgT-dH-TT5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="-563"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="GQT-ZK-dM9">
+            <objects>
+                <viewController id="UGD-68-Yxj" customClass="CatWelcomeViewController" customModule="Miaouf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4u8-ln-hgd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pouah ! Les chats ne sont pas autorisés ici !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfZ-Jk-9GI">
+                                <rect key="frame" x="31.333333333333343" y="416" width="330.66666666666663" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20482000710000001" green="0.47088336939999997" blue="0.64917975660000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1uf-mJ-5ds"/>
+                        <color key="backgroundColor" red="0.72902917860000005" green="0.98634558920000004" blue="0.99447208639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mfZ-Jk-9GI" firstAttribute="centerY" secondItem="4u8-ln-hgd" secondAttribute="centerY" id="blp-nC-hbY"/>
+                            <constraint firstItem="mfZ-Jk-9GI" firstAttribute="centerX" secondItem="4u8-ln-hgd" secondAttribute="centerX" id="ivj-iL-jjd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="Cat" id="Pse-qh-DnI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grm-Ec-DWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="-956"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Cat" width="25" height="25"/>
+        <image name="Dog 1" width="25" height="25"/>
         <image name="Paw" width="242" height="229"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
