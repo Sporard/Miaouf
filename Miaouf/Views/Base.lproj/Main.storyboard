@@ -122,6 +122,9 @@
                                 <rect key="frame" x="16" y="153" width="352" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="continue" textContentType="nickname"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kpu-tX-9Rw" id="AEh-tv-fjd"/>
+                                </connections>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-7f-CGb">
                                 <rect key="frame" x="19" y="294" width="51" height="31"/>
@@ -161,6 +164,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9d1-w8-dGr"/>
                         <color key="backgroundColor" red="0.72902917860000005" green="0.98634558920000004" blue="0.99447208639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="cx6-9v-Dx0" secondAttribute="trailing" constant="340" id="1rY-NN-PoT"/>
                             <constraint firstItem="yRw-eI-6br" firstAttribute="top" secondItem="EtK-3R-km6" secondAttribute="bottom" constant="8" symbolic="YES" id="1ug-VK-hXr"/>
@@ -197,10 +201,22 @@
                             <constraint firstItem="yRw-eI-6br" firstAttribute="leading" secondItem="9d1-w8-dGr" secondAttribute="leading" constant="16" id="t4V-Ol-V0O"/>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="bottom" secondItem="ZsM-ie-uei" secondAttribute="bottom" constant="20" id="zl2-Xb-GVd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AEl-mS-cGW" appends="YES" id="ngC-6h-FNC"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="C7G-vY-cUO"/>
+                    <connections>
+                        <outlet property="NameTextField" destination="I0s-F7-KG1" id="Ni2-Ct-Z62"/>
+                        <outlet property="PhoneTextField" destination="HUN-l8-fxX" id="gaG-qC-8rS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMv-j9-JtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AEl-mS-cGW">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="kpu-tX-9Rw" id="GdQ-Xd-TWI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2306.1068702290077" y="-33.098591549295776"/>
         </scene>
