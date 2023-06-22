@@ -17,6 +17,8 @@
 		CF6BB3022A38EF92000FA9B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6BB3012A38EF92000FA9B4 /* Assets.xcassets */; };
 		CF6BB3052A38EF92000FA9B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6BB3032A38EF92000FA9B4 /* LaunchScreen.storyboard */; };
 		CFFDEA0F2A43963A0089A131 /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDEA0E2A43963A0089A131 /* Races.swift */; };
+		CFFDEA112A44E68A0089A131 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDEA102A44E68A0089A131 /* Pet.swift */; };
+		CFFDEA152A44EC9C0089A131 /* CatFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDEA142A44EC9C0089A131 /* CatFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CF6BB3042A38EF92000FA9B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6BB3062A38EF92000FA9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFDEA0E2A43963A0089A131 /* Races.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Races.swift; path = "../../../../../Downloads/App Assets-2/Races.swift"; sourceTree = "<group>"; };
+		CFFDEA102A44E68A0089A131 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		CFFDEA142A44EC9C0089A131 /* CatFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				CFFDEA0E2A43963A0089A131 /* Races.swift */,
+				CFFDEA102A44E68A0089A131 /* Pet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				CF0A9BAA2A391020000D6182 /* FormViewController.swift */,
 				CF0A9BAE2A39146F000D6182 /* SuccessViewController.swift */,
 				CF0A9BB02A3A6043000D6182 /* CatWelcomeViewController.swift */,
+				CFFDEA142A44EC9C0089A131 /* CatFormViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 				CF0A9BA92A390F3A000D6182 /* WelcomeViewController.swift in Sources */,
 				CF6BB2F92A38EF90000FA9B4 /* AppDelegate.swift in Sources */,
 				CF0A9BAB2A391020000D6182 /* FormViewController.swift in Sources */,
+				CFFDEA152A44EC9C0089A131 /* CatFormViewController.swift in Sources */,
 				CF0A9BAF2A39146F000D6182 /* SuccessViewController.swift in Sources */,
+				CFFDEA112A44E68A0089A131 /* Pet.swift in Sources */,
 				CF0A9BB12A3A6043000D6182 /* CatWelcomeViewController.swift in Sources */,
 				CF6BB2FB2A38EF90000FA9B4 /* SceneDelegate.swift in Sources */,
 			);

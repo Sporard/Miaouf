@@ -29,15 +29,38 @@ class FormViewController: UIViewController {
      }
      */
 
-    @IBOutlet weak var NameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var sexeField: UISegmentedControl!
+    @IBOutlet weak var majoritySwitch: UISwitch!
+    @IBOutlet weak var racePickerView: UIPickerView!
     
-    @IBOutlet weak var PhoneTextField: UITextField!
+    
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        NameTextField.resignFirstResponder()
-        PhoneTextField.resignFirstResponder()
+        nameTextField.resignFirstResponder()
+        phoneTextField.resignFirstResponder()
     }
     
+    @IBAction func validateForm() {
+        createPetObject()
+    }
+    
+    private func createPetObject(){
+        let name = nameTextField.text
+        let phone = phoneTextField.text
+        let hasMajority = majoritySwitch.isOn
+        let genderSelectedIndex = sexeField.selectedSegmentIndex
+        let genderChosen: Gender = genderSelectedIndex == 0 ? Gender.male : Gender.female
+        
+        let raceIndex = racePickerView.selectedRow(inComponent: 0)
+        let race = dogRaces[raceIndex]
+        
+        
+        let dog = Pet(name: name, hasMajority: hasMajority, phone: phone, race: race, gender: genderChosen)
+        
+        
+    }
     @objc func keyboardAppear(_ notification: Notification){
         guard let frame = notification.userInfo? [UIViewController.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         let keyboardFrame = frame.cgRectValue
