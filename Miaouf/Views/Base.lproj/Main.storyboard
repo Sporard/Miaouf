@@ -97,7 +97,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="validateForm:" destination="kpu-tX-9Rw" eventType="touchUpInside" id="yez-N7-D3V"/>
+                                    <action selector="validateForm" destination="kpu-tX-9Rw" eventType="touchUpInside" id="fWA-8f-FGW"/>
                                     <segue destination="rwt-30-TWn" kind="presentation" id="y0v-Ss-uTt"/>
                                 </connections>
                             </button>
