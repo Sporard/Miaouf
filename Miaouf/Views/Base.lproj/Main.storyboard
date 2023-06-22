@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miaouf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SK-9K-TA1">
-                                <rect key="frame" x="125.33333333333331" y="153" width="142.33333333333337" height="57.666666666666657"/>
+                                <rect key="frame" x="125.33333333333333" y="153" width="142.33333333333337" height="57.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2SK-9K-TA1" secondAttribute="height" multiplier="47:19" id="LnF-og-o0E"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ZNK-5a-KfW"/>
@@ -130,14 +130,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-7f-CGb">
                                 <rect key="frame" x="16" y="294" width="51" height="31"/>
                             </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EtK-3R-km6">
-                                <rect key="frame" x="17" y="226" width="360" height="32"/>
-                                <segments>
-                                    <segment title="Mâle"/>
-                                    <segment title="Femelle"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Téléphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvJ-We-ZXQ">
                                 <rect key="frame" x="199" y="265" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -162,17 +154,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fgv-ex-IUK">
+                                <rect key="frame" x="20" y="225" width="360" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Mâle"/>
+                                    <segment title="Femelle"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9d1-w8-dGr"/>
                         <color key="backgroundColor" red="0.72902917860000005" green="0.98634558920000004" blue="0.99447208639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="cx6-9v-Dx0" secondAttribute="trailing" constant="340" id="1rY-NN-PoT"/>
-                            <constraint firstItem="yRw-eI-6br" firstAttribute="top" secondItem="EtK-3R-km6" secondAttribute="bottom" constant="8" symbolic="YES" id="1ug-VK-hXr"/>
                             <constraint firstItem="AFh-hy-P2b" firstAttribute="leading" secondItem="9d1-w8-dGr" secondAttribute="leading" constant="19" id="2Ay-s6-pdj"/>
                             <constraint firstItem="b3V-am-1Xf" firstAttribute="top" secondItem="AFh-hy-P2b" secondAttribute="bottom" constant="8" symbolic="YES" id="3Yw-9u-Zh9"/>
                             <constraint firstItem="b3V-am-1Xf" firstAttribute="top" secondItem="HUN-l8-fxX" secondAttribute="bottom" constant="117" id="9S0-0t-zLf"/>
-                            <constraint firstItem="EtK-3R-km6" firstAttribute="leading" secondItem="9d1-w8-dGr" secondAttribute="leading" constant="17" id="BGI-kg-UKI"/>
                             <constraint firstItem="G61-0k-dsl" firstAttribute="top" secondItem="I0s-F7-KG1" secondAttribute="bottom" constant="10" id="C7K-g3-Qrg"/>
                             <constraint firstItem="HUN-l8-fxX" firstAttribute="top" secondItem="qvJ-We-ZXQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Com-rd-OY7"/>
                             <constraint firstItem="ZsM-ie-uei" firstAttribute="top" secondItem="b3V-am-1Xf" secondAttribute="bottom" constant="53" id="Csw-wR-CrP"/>
@@ -190,11 +189,8 @@
                             <constraint firstItem="DlM-7f-CGb" firstAttribute="top" secondItem="yRw-eI-6br" secondAttribute="bottom" constant="8" symbolic="YES" id="Ygf-xf-zMP"/>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="I0s-F7-KG1" secondAttribute="trailing" constant="25" id="ZTF-XM-JjQ"/>
                             <constraint firstItem="G61-0k-dsl" firstAttribute="leading" secondItem="9d1-w8-dGr" secondAttribute="leading" constant="16" id="bkc-pS-ozF"/>
-                            <constraint firstItem="EtK-3R-km6" firstAttribute="top" secondItem="G61-0k-dsl" secondAttribute="bottom" constant="8" symbolic="YES" id="fXx-ws-qRq"/>
-                            <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="EtK-3R-km6" secondAttribute="trailing" constant="16" id="fne-8j-nxW"/>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="qvJ-We-ZXQ" secondAttribute="trailing" constant="114" id="jtc-kn-iH2"/>
                             <constraint firstItem="AFh-hy-P2b" firstAttribute="top" secondItem="DlM-7f-CGb" secondAttribute="bottom" constant="91" id="jux-4B-zhq"/>
-                            <constraint firstItem="qvJ-We-ZXQ" firstAttribute="top" secondItem="EtK-3R-km6" secondAttribute="bottom" constant="8" symbolic="YES" id="m7S-5T-3PO"/>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="b3V-am-1Xf" secondAttribute="trailing" constant="25" id="qDl-2j-0Rd"/>
                             <constraint firstItem="9d1-w8-dGr" firstAttribute="trailing" secondItem="G61-0k-dsl" secondAttribute="trailing" constant="340" id="qH7-E5-xRd"/>
                             <constraint firstItem="yRw-eI-6br" firstAttribute="leading" secondItem="9d1-w8-dGr" secondAttribute="leading" constant="16" id="t4V-Ol-V0O"/>
@@ -210,7 +206,7 @@
                         <outlet property="nameTextField" destination="I0s-F7-KG1" id="Mt9-Ui-3WA"/>
                         <outlet property="phoneTextField" destination="HUN-l8-fxX" id="tAZ-yH-lxf"/>
                         <outlet property="racePickerView" destination="b3V-am-1Xf" id="R97-TY-zNo"/>
-                        <outlet property="sexeField" destination="EtK-3R-km6" id="3ZI-Ey-swv"/>
+                        <outlet property="sexeField" destination="fgv-ex-IUK" id="0CT-fT-yPX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMv-j9-JtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,7 +233,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-RZ-ald">
-                                <rect key="frame" x="46.666666666666657" y="689.66666666666663" width="300" height="34.333333333333371"/>
+                                <rect key="frame" x="46.666666666666657" y="772.66666666666663" width="300" height="34.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="ywk-Lk-hCd"/>
                                 </constraints>
@@ -250,7 +246,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFY-nM-r2c">
-                                <rect key="frame" x="29.999999999999996" y="183" width="40.666666666666657" height="44"/>
+                                <rect key="frame" x="29.999999999999996" y="80" width="40.666666666666657" height="44"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="X">
@@ -423,8 +419,8 @@
                             <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2k-QO-K5C">
                                 <rect key="frame" x="16" y="364" width="349" height="216"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="kpu-tX-9Rw" id="wI3-W1-V61"/>
-                                    <outlet property="delegate" destination="kpu-tX-9Rw" id="yAZ-NR-whG"/>
+                                    <outlet property="dataSource" destination="n2E-kW-rUl" id="804-GY-oPw"/>
+                                    <outlet property="delegate" destination="n2E-kW-rUl" id="tDH-Zj-FCu"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPN-zs-q9Z">
@@ -491,7 +487,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="inA-4y-gZS"/>
+        <segue reference="y0v-Ss-uTt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cat" width="25" height="25"/>

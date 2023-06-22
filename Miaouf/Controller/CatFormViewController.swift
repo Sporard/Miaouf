@@ -52,7 +52,7 @@ class CatFormViewController: UIViewController {
     }
 
     @IBAction func validateForm(_ sender: Any) {
-        createCatPet()
+        self.createCatPet()
     }
     
     
