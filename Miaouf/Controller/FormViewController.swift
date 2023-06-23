@@ -9,6 +9,12 @@ import UIKit
 
 class FormViewController: UIViewController {
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var sexeField: UISegmentedControl!
+    @IBOutlet weak var majoritySwitch: UISwitch!
+    @IBOutlet weak var racePickerView: UIPickerView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,22 +24,20 @@ class FormViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisappear(_:)), name: UIViewController.keyboardWillHideNotification, object: nil)
     }
     
-    
     /*
      // MARK: - Navigation
+     */
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
+         if segue.identifier == "segueToSuccess"{
+             let successVC = segue.destination as? SuccessViewController
+             let pet = sender as? Pet
+             successVC?.pet = pet
+         }
      }
-     */
 
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var sexeField: UISegmentedControl!
-    @IBOutlet weak var majoritySwitch: UISwitch!
-    @IBOutlet weak var racePickerView: UIPickerView!
+
     
     
     
@@ -43,10 +47,11 @@ class FormViewController: UIViewController {
     }
     
     @IBAction func validateForm() {
-        self.createPetObject()
+        let pet = self.createPetObject()
+        performSegue(withIdentifier: "segueToSuccess", sender: pet)
     }
     
-    private func createPetObject(){
+    private func createPetObject() -> Pet{
         let name = nameTextField.text
         let phone = phoneTextField.text
         let hasMajority = majoritySwitch.isOn
@@ -56,8 +61,7 @@ class FormViewController: UIViewController {
         let raceIndex = racePickerView.selectedRow(inComponent: 0)
         let race = dogRaces[raceIndex]
         
-        
-        let dog = Pet(name: name, hasMajority: hasMajority, phone: phone, race: race, gender: genderChosen)
+        return Pet(name: name, hasMajority: hasMajority, phone: phone, race: race, gender: genderChosen)
         
         
     }

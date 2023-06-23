@@ -98,7 +98,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="validateForm" destination="kpu-tX-9Rw" eventType="touchUpInside" id="fWA-8f-FGW"/>
-                                    <segue destination="rwt-30-TWn" kind="presentation" id="y0v-Ss-uTt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx6-9v-Dx0">
@@ -207,6 +206,7 @@
                         <outlet property="phoneTextField" destination="HUN-l8-fxX" id="tAZ-yH-lxf"/>
                         <outlet property="racePickerView" destination="b3V-am-1Xf" id="R97-TY-zNo"/>
                         <outlet property="sexeField" destination="fgv-ex-IUK" id="0CT-fT-yPX"/>
+                        <segue destination="rwt-30-TWn" kind="presentation" identifier="segueToSuccess" id="625-Eu-fmo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMv-j9-JtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,9 +226,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bravo !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-4X-2oF">
-                                <rect key="frame" x="120.66666666666669" y="395" width="152" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bravo !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-4X-2oF">
+                                <rect key="frame" x="149" y="407" width="95" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.20482000710000001" green="0.47088336939999997" blue="0.64917975660000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -261,14 +261,17 @@
                         <color key="backgroundColor" red="0.72902917860000005" green="0.98634558920000004" blue="0.99447208639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="CFY-nM-r2c" firstAttribute="leading" secondItem="YwO-r9-XHa" secondAttribute="leading" constant="30" id="0Zy-LJ-oz8"/>
-                            <constraint firstItem="gLm-4X-2oF" firstAttribute="centerY" secondItem="RTE-fy-AFg" secondAttribute="centerY" id="axD-Qs-FWr"/>
+                            <constraint firstItem="gLm-4X-2oF" firstAttribute="centerY" secondItem="RTE-fy-AFg" secondAttribute="centerY" id="aT7-H6-qKj"/>
+                            <constraint firstItem="gLm-4X-2oF" firstAttribute="centerX" secondItem="RTE-fy-AFg" secondAttribute="centerX" id="d2q-N5-x9Z"/>
                             <constraint firstItem="YwO-r9-XHa" firstAttribute="bottom" secondItem="fXT-RZ-ald" secondAttribute="bottom" constant="45" id="ffP-bn-7gH"/>
                             <constraint firstItem="fXT-RZ-ald" firstAttribute="centerX" secondItem="RTE-fy-AFg" secondAttribute="centerX" id="hI3-70-UTE"/>
-                            <constraint firstItem="gLm-4X-2oF" firstAttribute="centerX" secondItem="RTE-fy-AFg" secondAttribute="centerX" id="k7c-5E-5FQ"/>
                             <constraint firstItem="CFY-nM-r2c" firstAttribute="top" secondItem="YwO-r9-XHa" secondAttribute="top" constant="80" id="xFw-GY-uhi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YtV-Mb-hGN"/>
+                    <connections>
+                        <outlet property="successText" destination="gLm-4X-2oF" id="Pdv-a2-f5A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fW-V7-5qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qgR-3F-D07" userLabel="Exit" sceneMemberID="exit"/>
@@ -416,13 +419,6 @@
                                 <color key="textColor" red="0.21663346889999999" green="0.49074381589999999" blue="0.66489654779999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2k-QO-K5C">
-                                <rect key="frame" x="16" y="364" width="349" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="n2E-kW-rUl" id="804-GY-oPw"/>
-                                    <outlet property="delegate" destination="n2E-kW-rUl" id="tDH-Zj-FCu"/>
-                                </connections>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPN-zs-q9Z">
                                 <rect key="frame" x="71" y="734" width="250" height="35"/>
                                 <constraints>
@@ -453,6 +449,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2k-QO-K5C">
+                                <rect key="frame" x="36.666666666666657" y="364" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="n2E-kW-rUl" id="804-GY-oPw"/>
+                                    <outlet property="delegate" destination="n2E-kW-rUl" id="tDH-Zj-FCu"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="084-zh-vRP"/>
                         <color key="backgroundColor" red="0.72902917860000005" green="0.98634558920000004" blue="0.99447208639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -461,6 +464,7 @@
                             <constraint firstItem="084-zh-vRP" firstAttribute="trailing" secondItem="kPN-zs-q9Z" secondAttribute="trailing" constant="72" id="B6t-iB-kEJ"/>
                             <constraint firstItem="kPN-zs-q9Z" firstAttribute="bottom" secondItem="084-zh-vRP" secondAttribute="bottom" id="BgV-pF-Kk0"/>
                             <constraint firstItem="kPN-zs-q9Z" firstAttribute="leading" secondItem="084-zh-vRP" secondAttribute="leading" constant="71" id="Qzd-mm-8ny"/>
+                            <constraint firstItem="b2k-QO-K5C" firstAttribute="centerX" secondItem="jXF-ik-IJq" secondAttribute="centerX" id="joP-c9-6B9"/>
                             <constraint firstItem="kPN-zs-q9Z" firstAttribute="top" secondItem="b2k-QO-K5C" secondAttribute="bottom" constant="154" id="wkp-v6-WZc"/>
                         </constraints>
                         <connections>
@@ -487,7 +491,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y0v-Ss-uTt"/>
+        <segue reference="625-Eu-fmo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Cat" width="25" height="25"/>
