@@ -56,7 +56,7 @@ class FormViewController: UIViewController {
         let phone = phoneTextField.text
         let hasMajority = majoritySwitch.isOn
         let genderSelectedIndex = sexeField.selectedSegmentIndex
-        let genderChosen: Gender = genderSelectedIndex == 0 ? Gender.male : Gender.female
+        let genderChosen: Pet.Gender = genderSelectedIndex == 0 ? Pet.Gender.male : Pet.Gender.female
         
         let raceIndex = racePickerView.selectedRow(inComponent: 0)
         let race = dogRaces[raceIndex]

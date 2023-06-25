@@ -62,7 +62,7 @@ class CatFormViewController: UIViewController {
         let phone = phoneTextField.text
         let hasMajority = hasMajoritySwitch.isOn
         let genderSelectedIndex = genderSegmented.selectedSegmentIndex
-        let genderChosen: Gender = genderSelectedIndex == 0 ? Gender.male : Gender.female
+        let genderChosen: Pet.Gender = genderSelectedIndex == 0 ? Pet.Gender.male : Pet.Gender.female
         
         let raceIndex = catRacesPickerView.selectedRow(inComponent: 0)
         let race = dogRaces[raceIndex]
