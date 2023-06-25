@@ -27,17 +27,17 @@ class FormViewController: UIViewController {
     /*
      // MARK: - Navigation
      */
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "segueToSuccess"{
-             let successVC = segue.destination as? SuccessViewController
-             let pet = sender as? Pet
-             successVC?.pet = pet
-         }
-     }
-
-
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToSuccess"{
+            let successVC = segue.destination as? SuccessViewController
+            let pet = sender as? Pet
+            successVC?.pet = pet
+        }
+    }
+    
+    
     
     
     
@@ -48,7 +48,25 @@ class FormViewController: UIViewController {
     
     @IBAction func validateForm() {
         let pet = self.createPetObject()
-        performSegue(withIdentifier: "segueToSuccess", sender: pet)
+        self.validatePet(pet)
+    }
+    
+    
+    private func validatePet(_ pet: Pet) {
+        switch (pet.status){
+        case .accepted:
+            performSegue(withIdentifier: "segueToSuccess", sender: pet)
+        case .rejected(let reason):
+            self.presentAlert(reason)
+
+        }
+    }
+    
+    private func presentAlert(_ reason: String) {
+        let alertVC = UIAlertController(title: "Erreur", message: reason, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertVC.addAction(action)
+        present(alertVC, animated: true, completion: nil)
     }
     
     private func createPetObject() -> Pet{
